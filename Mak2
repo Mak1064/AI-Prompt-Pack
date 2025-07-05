@@ -1,0 +1,94 @@
+import Head from "next/head";
+import { Mail, Sparkles } from "lucide-react";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-white text-gray-900 p-6 md:p-12">
+      <Head>
+        <title>AI Prompt Pack for Solopreneurs</title>
+        <meta name="description" content="100+ AI prompts to grow your solo business" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto text-center space-y-6 py-20">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          AI Prompt Pack for Solopreneurs
+        </h1>
+        <p className="text-lg md:text-xl text-gray-600">
+          100+ curated prompts to help freelancers, indie founders & creators market, sell, and scale faster using AI.
+        </p>
+        <a
+          href="https://your-gumroad-link.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-black text-white text-lg font-medium px-6 py-4 rounded-xl shadow-md hover:bg-gray-800"
+        >
+          Buy Now – $29
+        </a>
+        <p className="text-sm text-gray-400">Lifetime access · Instant download</p>
+      </section>
+
+      {/* Preview Section */}
+      <section className="max-w-3xl mx-auto grid gap-6">
+        <h2 className="text-2xl font-semibold text-center">What's Inside:</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {["Cold outreach email prompts","Social media content planner","Ad copy & landing page drafts","Lead magnet generators","Customer research questions","SEO blog prompt workflows"].map((item, i) => (
+            <div
+              key={i}
+              className="border rounded-xl p-4 flex items-start gap-3 shadow-sm"
+            >
+              <Sparkles className="text-purple-500 mt-1" />
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="max-w-3xl mx-auto mt-20 text-center space-y-10">
+        <h2 className="text-2xl font-semibold">What Others Are Saying</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="border rounded-xl p-6 shadow-sm">
+            <p>“I used 4 prompts and closed 2 new clients in a week. Insanely good.”</p>
+            <p className="mt-2 text-sm text-gray-500">— Jamie, Freelance Marketer</p>
+          </div>
+          <div className="border rounded-xl p-6 shadow-sm">
+            <p>“This is like having a $500/month AI assistant. Worth every cent.”</p>
+            <p className="mt-2 text-sm text-gray-500">— Priya, Solo SaaS Founder</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Email Signup (Optional) */}
+      <section className="max-w-xl mx-auto mt-20 text-center space-y-4">
+        <h2 className="text-xl font-semibold">Want a free sample?</h2>
+        <p className="text-gray-600">Enter your email to get 10 free prompts instantly.</p>
+        <form
+          action="https://your-email-service.com/subscribe"
+          method="POST"
+          className="flex flex-col md:flex-row items-center gap-4 justify-center"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+            className="border border-gray-300 rounded px-4 py-2 w-64"
+          />
+          <button
+            type="submit"
+            className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800"
+          >
+            <Mail size={16} /> Get Sample
+          </button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-400 mt-20 pb-10">
+        © 2025 AI Prompt Pack. Built for flipping.
+      </footer>
+    </main>
+  );
+}
